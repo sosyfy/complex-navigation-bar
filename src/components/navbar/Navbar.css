@@ -1,0 +1,278 @@
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 0.9rem 3%;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* navbar  logo */
+
+header .nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;      
+}
+header .nav-top .mobile-menu {
+    display: none;
+}
+
+header .nav-top .logo a {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: var(--bs-success);
+}
+
+header .nav-top .logo a span {
+    font-weight: 600;
+    font-size: 32px;
+    margin-left: 0.4rem;
+    line-height: 6rem;
+    font-family: "Fredoka One",cursive;
+    letter-spacing: 1px;
+    color: var(--theme-color);
+}
+
+/* search bar  */
+
+header form {
+    display: block;
+}
+header form .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+header form .search-bar svg {
+    position: absolute;
+    left: 15px;
+    color: #ced4da;
+    font-size: 20px;
+}
+header form .search-bar input {
+     padding-left: 4.5rem;
+     padding-right: 1rem;
+     max-width: 350px;
+     font-size: 1rem;
+     font-weight: 500;
+     line-height: 32px;
+     border: 0;
+     padding-top: 0.4rem;
+     padding-bottom: 0.4rem;
+     border-radius: 2.5rem;
+     background-color: #eee;
+     min-width: 300px;
+}
+
+/* secondary menu  */
+
+
+header .secondary-menu {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    /* margin-left: -9rem; */
+}
+header .secondary-menu a {
+   text-align: center;
+   background-color: #f5f5f5;
+   border-radius: 50%;
+}
+header .secondary-menu a svg {
+    color: #adb5bd;
+    line-height: 50px;
+    padding: 0.8rem;
+    font-size: 4.2rem;
+}
+header .secondary-menu a:active{
+    background-color: #d2e3ff;
+    border-color: #bcd5fe;
+
+}
+header .secondary-menu a:active svg{
+    color: #1e74fd;
+}
+
+/* main menu  */
+
+header .main-menu {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+header .main-menu a {
+   text-align: center;
+   padding: 0.2rem; 
+}
+header .main-menu a svg {
+    color: var(--theme-color)!important;
+    line-height: 50px;
+    padding: 0.8rem;
+    font-size: 4.3rem;
+    border-radius: 50%;
+}
+
+.header-notification-icon {
+    position: relative;
+}
+.header-notification-icon span{
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    line-height: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    background-color: #fe9431!important;
+}
+.header-settings-icon{
+
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+/* rotate animation  */
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+header .main-menu img {
+    width: 40px;
+}
+
+/* media queries */
+/* laptop screen and large tablets    */
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1200px) 
+  {
+  header .secondary-menu {
+      display: none;
+  }
+  header .main-menu  {
+      margin-right: 3rem;
+  }
+}
+
+/* mobile and small tablets  */
+
+@media only screen  and (max-device-width: 1024px) {
+ 
+  header .nav-top  {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    /* justify-content: space-between; */
+}
+header .nav-top .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+header .nav-top .mobile-menu a {
+   text-align: center;
+   background-color: #f5f5f5;
+   border-radius: 50%;
+}
+header .nav-top .mobile-menu a svg {
+    color: #adb5bd;
+    line-height: 50px;
+    padding: 0.8rem;
+    font-size: 4.2rem;
+}
+
+/* humburger menu  */
+
+header .nav-top .mobile-menu .humburger-menu{
+    cursor: pointer;
+    border: 0;
+    background-color: transparent!important;
+    flex-shrink: 0;
+    width: 27px;
+    height: 27px;
+    font-size: 0;
+    position: relative;
+    margin-left: 0.2rem;
+
+}
+header .nav-top .mobile-menu .humburger-menu::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 2.5px;
+    top: 7px;
+    right: 0;
+    position: absolute;
+    border-radius: 1px;
+    background: #1b1d21;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+header .nav-top .mobile-menu .humburger-menu::after {
+   content: "";
+    display: inline-block;
+    width: 22px;
+    height: 2.5px;
+    top: 18px;
+    right: 0;
+    position: absolute;
+    border-radius: 1px;
+    background: #1b1d21;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+header .nav-top .mobile-menu.active .humburger-menu::after{
+    transform: translateY(-8px) rotate(-45deg);
+    top: 20px;
+    width: 31px;
+}
+header .nav-top .mobile-menu.active .humburger-menu::before{
+    transform: translateY(-8px) rotate(45deg);
+    top: 20px;
+    width: 31px;
+}
+
+  header .secondary-menu {
+      display: none;
+  }
+  header .main-menu  {
+      display: none;
+  }
+   header form {
+      display: none;
+  }
+}

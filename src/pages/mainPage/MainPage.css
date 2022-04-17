@@ -1,0 +1,12 @@
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    position: relative;
+    z-index: inherit;
+}
+@media only screen  and (max-device-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+}

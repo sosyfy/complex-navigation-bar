@@ -1,0 +1,73 @@
+@media only screen  and (max-device-width: 1024px) {
+  .sidebar {
+      width: auto;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      min-width: 280px;
+      z-index: 150;
+      background: white;
+      overflow-y: scroll;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  }
+  ::-webkit-scrollbar {
+      display: none;
+  }
+  .sidebar.close {
+      display: none;
+  }
+  .sidebar_container {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      padding-left: 2rem;
+      padding-right: 1rem;
+  }
+  .sidebar_card {
+      background-color: #fff;
+      padding-bottom: 0.3rem;
+      padding-top: 1rem;
+      margin-bottom: 0.2rem;
+      margin-top: 0.5rem;
+  }
+  .sidebar_caption {
+      margin-bottom: 5px;
+      white-space: nowrap;
+      padding-left: 1.5rem;
+      font-weight: 600;
+      color: #adb5bd;
+      font-size: 0.9rem;
+  }
+  .sidebar_card ul{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.25rem;  
+  }
+  .sidebar_card ul li {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #888;
+      line-height: 28px;
+  }
+   .sidebar_card ul li a{
+       display: flex;
+       align-items: center;
+       color: #888;
+      font-size: 1.2rem;
+      font-weight: 600;
+      font-family: "Open Sans",sans-serif;
+      padding: 10px 15px 10px 15px;
+   }
+    .sidebar_card ul li a svg {
+        font-size: 20px;
+        color: #fff;
+        margin-right: 1rem;
+        text-align: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        padding: 1rem;
+        background: linear-gradient(to right,#0575e6,#021b79)!important;
+    }
+
+}
